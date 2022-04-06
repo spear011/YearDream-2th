@@ -16,7 +16,7 @@ def index():
 # </html>
   
 # routing: 사용자의 접속 경로를 지정
-# rendering : 페이지를 그려내는것
+
 # 외부 api 정보 가져오기
 
 @app.route('/posts')
@@ -26,6 +26,11 @@ def show_posts():
   return jsonify(to_serve)
 
 # /todos -> "This is todos"
+
+@app.route('/quote/<string:name>')
+def show_quote(name=None):
+  
+  return "This is quote {}".format(name)
 
 if __name__=='__main__':
   app.run(host='0.0.0.0', port=4000, debug=True)
