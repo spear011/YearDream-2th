@@ -16,6 +16,7 @@ def index():
 # </html>
   
 # routing: 사용자의 접속 경로를 지정
+# rendering : 페이지를 그려내는것
 
 # 외부 api 정보 가져오기
 
